@@ -1,0 +1,4 @@
+.section-container {
+  width: min(var(--max-width), calc(100% - (var(--gutter) * 2)));
+  margin-inline: auto;
+}

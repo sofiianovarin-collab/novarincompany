@@ -1,0 +1,152 @@
+.perspective-art,
+.perspective-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perspective-art {
+  background: #e7e1d6;
+  stroke: var(--color-navy);
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.perspective-art.art-local-payment-infrastructure {
+  background: #d9e0e6;
+}
+
+.perspective-art.art-building-for-scale {
+  background: #e4ddd2;
+}
+
+.perspective-art.art-operating-responsibilities {
+  background: #ddd6cc;
+}
+
+.perspective-art.art-product-to-everyday-use {
+  background: #e8e2d4;
+  stroke: #8a641f;
+}
+
+.perspective-art.art-cross-border-payments {
+  background: #e3ddd4;
+}
+
+.perspective-art.art-founder-questions {
+  background: #ddd8d0;
+}
+
+.perspective-art.art-open-financial-future {
+  background: #d5dee6;
+  stroke: #8a641f;
+}
+
+.perspective-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e4ddd2;
+}
+
+.perspective-draft {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.perspective-category {
+  margin: 0 0 8px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.perspective-copy h2,
+.perspective-copy h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.perspective-copy h2 {
+  font-size: clamp(32px, 3vw, 40px);
+}
+
+.perspective-copy h3 {
+  font-size: clamp(25px, 2vw, 30px);
+}
+
+.perspective-copy > p {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.perspective-meta {
+  font-size: 14px;
+}
+
+.perspective-read {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-gold-dark);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.perspective-read:hover {
+  text-decoration: underline;
+}
+
+.perspective-card,
+.perspective-feature {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+.perspective-card .perspective-copy,
+.perspective-feature .perspective-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 18px 20px;
+}
+
+.perspective-card .perspective-read,
+.perspective-feature .perspective-read {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+@media (min-width: 800px) {
+  .perspective-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .perspective-feature .perspective-media {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+}

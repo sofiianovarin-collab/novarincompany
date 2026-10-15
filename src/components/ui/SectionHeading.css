@@ -1,0 +1,41 @@
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.section-heading-dark .eyebrow {
+  color: var(--color-gold-dark);
+}
+
+.section-heading-dark h2 {
+  color: var(--color-text);
+  font-size: clamp(36px, 4.4vw, 48px);
+}
+
+.section-heading-light .eyebrow {
+  color: var(--color-gold);
+}
+
+.section-heading-light h1,
+.section-heading-light h2 {
+  color: var(--color-white);
+}
+
+.section-intro {
+  margin: 18px 0 0;
+  max-width: 38rem;
+  color: var(--color-muted);
+  font-size: 18px;
+}

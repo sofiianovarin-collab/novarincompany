@@ -1,0 +1,241 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(var(--max-width), calc(100% - (var(--gutter) * 2)));
+  height: var(--header-height);
+  margin-inline: auto;
+}
+
+.brand-lockup {
+  --brand-mark-size: calc(var(--header-height) * 0.75);
+  --brand-wordmark-size: clamp(36px, 5.4vw, 45px);
+  --brand-lockup-gap: clamp(10px, 1.4vw, 14px);
+
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  color: var(--color-white);
+  text-decoration: none;
+  min-width: 0;
+  max-width: min(100%, 560px);
+}
+
+.brand-lockup__visual {
+  display: flex;
+  align-items: center;
+  gap: var(--brand-lockup-gap);
+  min-width: 0;
+  height: 100%;
+}
+
+.brand-lockup__mark {
+  flex-shrink: 0;
+  width: auto;
+  height: var(--brand-mark-size);
+  display: block;
+}
+
+.brand-lockup__name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-lockup__wordmark {
+  width: auto;
+  height: var(--brand-wordmark-size);
+  max-width: min(315px, 58vw);
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.brand-lockup__tagline {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .brand-lockup {
+    --brand-wordmark-size: 32px;
+  }
+
+  .brand-lockup__tagline {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav ul,
+.mobile-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link,
+.nav-planned,
+.nav-contact {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.nav-link:hover {
+  color: var(--color-white);
+}
+
+.nav-current {
+  color: var(--color-white);
+  box-shadow: inset 0 -1px 0 var(--color-gold);
+}
+
+.nav-planned {
+  color: rgba(255, 255, 255, 0.42);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+  cursor: not-allowed;
+}
+
+.nav-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 108px;
+  min-height: 44px;
+  padding: 8px 18px;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.nav-contact:hover {
+  background: var(--color-gold-hover);
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.menu-bars,
+.menu-bars::before,
+.menu-bars::after {
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.menu-bars {
+  position: relative;
+}
+
+.menu-bars::before,
+.menu-bars::after {
+  position: absolute;
+  left: 0;
+}
+
+.menu-bars::before {
+  top: -6px;
+}
+
+.menu-bars::after {
+  top: 6px;
+}
+
+.mobile-nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-navy);
+  padding: 12px var(--gutter) 24px;
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav .nav-link,
+.mobile-nav .nav-planned,
+.mobile-nav .nav-contact {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  width: 100%;
+}
+
+.mobile-nav .nav-contact {
+  margin-top: 16px;
+  width: fit-content;
+}
+
+.menu-close {
+  min-height: 44px;
+  margin-top: 18px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-gold);
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) and (max-width: 1240px) {
+  .desktop-nav ul {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu-toggle,
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+}

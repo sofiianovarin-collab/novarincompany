@@ -1,0 +1,307 @@
+:root {
+  --motion-feedback: 160ms;
+  --motion-control: 220ms;
+  --motion-disclosure: 260ms;
+  --motion-reveal: 400ms;
+  --motion-hero: 640ms;
+  --motion-route: 200ms;
+  --motion-image: 450ms;
+  --ease-interface: cubic-bezier(0.2, 0, 0, 1);
+  --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-distance: 8px;
+  --reveal-delay: 0ms;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --motion-reveal: 560ms;
+    --reveal-distance: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button,
+  .nav-link,
+  .nav-contact,
+  .menu-toggle,
+  .menu-close,
+  .learn-more,
+  .perspective-read,
+  .inquiry-type-options label,
+  .inquiry-field input,
+  .inquiry-field select,
+  .inquiry-field textarea,
+  .perspective-topics button {
+    transition-property: color, background-color, border-color;
+    transition-duration: var(--motion-control);
+    transition-timing-function: var(--ease-interface);
+  }
+
+  .button-arrow,
+  .learn-more span,
+  .process-toggle span,
+  .contact-faq summary span,
+  .nav-link::after {
+    transition: transform var(--motion-control) var(--ease-interface);
+  }
+
+  .button-primary:hover,
+  .nav-contact:hover {
+    background: var(--color-gold-hover);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .button-primary:hover .button-arrow,
+    .learn-more:hover span,
+    .process-toggle:hover span {
+      transform: translateX(3px);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary:active {
+      transform: translateY(0);
+    }
+
+    .lift-card {
+      transition:
+        border-color var(--motion-control) var(--ease-interface),
+        transform var(--motion-control) var(--ease-interface);
+    }
+
+    .lift-card:hover {
+      border-color: #d9c7a4;
+      transform: translateY(-3px);
+    }
+
+    .editorial-frame img {
+      transition: transform var(--motion-image) var(--ease-interface);
+    }
+
+    .editorial-frame:hover img {
+      transform: scale(1.025);
+    }
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    left: 0;
+    height: 1px;
+    background: var(--color-gold);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.nav-current::after {
+    transform: scaleX(1);
+  }
+
+  .nav-current {
+    box-shadow: none;
+  }
+
+  .text-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    text-decoration: none;
+    transition: background-size var(--motion-control) var(--ease-interface);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .text-link:hover {
+      background-size: 100% 1px;
+    }
+  }
+
+  .site-header {
+    transition:
+      box-shadow var(--motion-control) var(--ease-interface),
+      background-color var(--motion-control) var(--ease-interface);
+  }
+
+  .site-header.is-scrolled {
+    background: #061722;
+    box-shadow: inset 0 -1px 0 rgba(213, 177, 106, 0.35);
+  }
+
+  .mobile-nav {
+    animation: motion-menu var(--motion-disclosure) var(--ease-interface) both;
+  }
+
+  .hero-enter .hero-mark,
+  .hero-enter .about-eyebrow span,
+  .hero-enter .approach-kicker span {
+    transform-origin: left center;
+    animation: motion-line 420ms var(--ease-entrance) both;
+  }
+
+  .hero-enter h1 {
+    animation: motion-settle 520ms var(--ease-entrance) both;
+  }
+
+  .hero-enter .hero-summary,
+  .hero-enter .about-hero-summary,
+  .hero-enter .focus-hero-summary,
+  .hero-enter .approach-hero-summary {
+    animation: motion-settle 520ms var(--ease-entrance) 80ms both;
+  }
+
+  .hero-enter .hero-actions,
+  .hero-enter .hero-aside,
+  .hero-enter .about-hero-aside,
+  .hero-enter .focus-hero-aside,
+  .hero-enter .approach-hero-aside {
+    animation: motion-settle 520ms var(--ease-entrance) 120ms both;
+  }
+
+  .reveal.is-revealing {
+    animation: motion-reveal var(--motion-reveal) var(--ease-entrance) var(--reveal-delay) both;
+  }
+
+  main.route-enter > :not([data-hero]) {
+    animation: motion-route var(--motion-route) var(--ease-entrance) both;
+  }
+
+  .perspective-reader[open] {
+    animation: motion-dialog 200ms var(--ease-entrance);
+  }
+
+  .perspective-reader[open]::backdrop {
+    animation: motion-fade 160ms var(--ease-interface);
+  }
+
+  .process-steps.is-revealing > li {
+    animation: motion-reveal var(--motion-reveal) var(--ease-entrance) both;
+  }
+
+  .process-steps.is-revealing::before {
+    transform-origin: left center;
+    animation: motion-line 560ms var(--ease-entrance) both;
+  }
+
+  .lift-card {
+    position: relative;
+  }
+
+  .lift-card::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: 0 10px 24px rgba(7, 29, 43, 0.08);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--motion-control) var(--ease-interface);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .lift-card:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
+.button:disabled,
+.button[aria-disabled="true"],
+.nav-planned {
+  transform: none;
+}
+
+@keyframes motion-settle {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes motion-reveal {
+  from {
+    opacity: 0.85;
+    transform: translateY(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes motion-route {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes motion-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes motion-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motion-menu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes motion-dialog {
+  from {
+    opacity: 0.92;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.header-sentinel {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.disclosure-panel.is-animating {
+  overflow: hidden;
+}
+
+.hero-photo.is-depth {
+  will-change: auto;
+}

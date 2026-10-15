@@ -1,0 +1,240 @@
+.leadership-roster {
+  padding: 56px 0 64px;
+}
+
+.leadership-roster.tone-ivory {
+  background: var(--color-ivory);
+  color: var(--color-text);
+}
+
+.leadership-roster.tone-warm {
+  background: #f3eee4;
+  color: var(--color-text);
+}
+
+.leadership-roster-layout {
+  display: grid;
+  gap: 36px;
+}
+
+.leadership-roster-kicker {
+  margin: 0 0 12px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.leadership-roster h2 {
+  margin: 0;
+  max-width: 12em;
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.leadership-roster h2 span {
+  display: block;
+}
+
+.leadership-roster-intro > p:last-child {
+  max-width: 28rem;
+  margin: 14px 0 0;
+  color: var(--color-muted);
+}
+
+.leadership-cards {
+  display: grid;
+  gap: 28px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leadership-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 10px;
+  margin-top: 16px;
+}
+
+.leadership-card h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.leadership-name-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-gold-dark);
+}
+
+.leadership-name-links a {
+  display: inline-flex;
+  color: inherit;
+}
+
+.leadership-name-links svg {
+  width: 22px;
+  height: 22px;
+}
+
+.leadership-name-links a:hover {
+  color: var(--color-navy);
+}
+
+.leadership-title,
+.leadership-status,
+.leadership-bio,
+.leadership-remit {
+  margin: 8px 0 0;
+}
+
+.leadership-title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.leadership-status {
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.leadership-bio,
+.leadership-remit {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.leadership-remit span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-gold-dark);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.leadership-portrait {
+  aspect-ratio: 4 / 5;
+  background: #e4ddd2;
+  border: 1px solid var(--color-border);
+}
+
+.leadership-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leadership-portrait-fallback {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 100%;
+  padding: 16px;
+}
+
+.leadership-portrait-fallback::before {
+  width: 36px;
+  height: 1px;
+  background: var(--color-gold);
+  content: "";
+}
+
+.leadership-draft-mark,
+.leadership-portrait-label {
+  color: #8d8376;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.leadership-draft-mark {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.leadership-linkedin {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--color-gold-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 560px) {
+  .leadership-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .leadership-roster-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+    gap: 32px;
+    align-items: end;
+  }
+
+  .leadership-roster-intro > p {
+    margin: 0;
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+@media (min-width: 960px) {
+  .leadership-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 20px;
+  }
+
+  .leadership-portrait {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+  }
+
+  .leadership-name {
+    margin-top: 14px;
+  }
+
+  .leadership-card h3 {
+    font-size: clamp(20px, 1.65vw, 24px);
+  }
+
+  .leadership-title {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 1100px) {
+  .leadership-roster {
+    padding: 72px 0 80px;
+  }
+
+  .leadership-cards {
+    gap: 28px 24px;
+  }
+}

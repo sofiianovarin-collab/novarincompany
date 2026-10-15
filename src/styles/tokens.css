@@ -1,0 +1,38 @@
+:root {
+  --color-navy: #071d2b;
+  --color-navy-2: #102d43;
+  --color-ivory: #faf8f3;
+  --color-white: #ffffff;
+  --color-text: #10273d;
+  --color-muted: #526174;
+  --color-gold: #d5b16a;
+  --color-gold-hover: #e0c283;
+  --color-gold-dark: #8a641f;
+  --color-border: #e6ddce;
+  --color-navy-line: rgba(213, 177, 106, 0.35);
+  --color-focus: #d5b16a;
+  --max-width: 1280px;
+  --gutter: 22px;
+  --header-height: 76px;
+  --radius: 5px;
+  --font-serif: "Cormorant Garamond", Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --shadow-none: none;
+  --section-space: 88px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+    --header-height: 88px;
+    --section-space: 104px;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --gutter: 56px;
+    --header-height: 92px;
+    --section-space: 120px;
+  }
+}

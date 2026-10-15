@@ -1,0 +1,45 @@
+{
+  "candidateId": "rc-2026-09-25-public-content",
+  "outcome": "CHANGES REQUIRED",
+  "sourceRevision": null,
+  "sourceNote": "This workspace is not a git repository. No commit or tag was created.",
+  "runtime": {
+    "node": "v24.16.0",
+    "npm": "12.0.1",
+    "packageManager": "npm",
+    "lockfile": "package-lock.json",
+    "framework": "Vite 8.3.0, React 19, TypeScript"
+  },
+  "build": {
+    "command": "npx vite build --outDir artifacts/release-step13/candidate",
+    "previewFlag": false,
+    "sourcemap": false,
+    "elapsedSeconds": 0.31,
+    "output": "artifacts/release-step13/candidate"
+  },
+  "routes": [
+    { "path": "/", "state": "public marketing copy; no licensed hero image" },
+    { "path": "/about", "state": "public marketing copy; image slots empty" },
+    { "path": "/investment-focus", "state": "public marketing copy; image slots empty" },
+    { "path": "/approach", "state": "public marketing copy; image slot empty" },
+    { "path": "/leadership", "state": "empty public state; no approved profiles" },
+    { "path": "/perspectives", "state": "empty public state; no approved articles" },
+    { "path": "/contact", "state": "online inquiries unavailable" },
+    { "path": "/privacy", "state": "unavailable; review text excluded" },
+    { "path": "/terms", "state": "unavailable; review text excluded" }
+  ],
+  "deliveryMode": "disabled",
+  "indexing": "noindex, nofollow in index.html",
+  "requiredEnvironmentNames": [
+    "CONTACT_DELIVERY_MODE",
+    "CONTACT_ALLOWED_ORIGINS",
+    "CONTACT_RATE_LIMIT",
+    "CONTACT_PROVIDER",
+    "CONTACT_SENDER",
+    "CONTACT_RECIPIENT",
+    "CONTACT_DELIVERY_LIVE_AUTHORIZED"
+  ],
+  "host": "not confirmed",
+  "domain": "not confirmed",
+  "checksums": "artifacts/release-step13/checksums.sha256"
+}

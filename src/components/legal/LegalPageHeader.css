@@ -1,0 +1,66 @@
+.legal-hero {
+  background:
+    radial-gradient(40% 90% at 90% 40%, rgba(213, 177, 106, 0.18), transparent 60%),
+    var(--color-navy);
+  color: var(--color-white);
+  padding: calc(var(--header-height) + 28px) 0 32px;
+}
+
+.legal-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.legal-kicker span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.legal-hero h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.legal-hero h1 em {
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.legal-hero p {
+  max-width: 36rem;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+}
+
+@media (min-width: 900px) {
+  .legal-hero {
+    min-height: calc(var(--header-height) + 240px);
+    padding: calc(var(--header-height) + 40px) 0 40px;
+  }
+}
+
+@media print {
+  .legal-hero {
+    background: white;
+    color: black;
+    min-height: 0;
+    padding: 0 0 16px;
+  }
+
+  .legal-hero h1 em,
+  .legal-kicker {
+    color: black;
+  }
+}

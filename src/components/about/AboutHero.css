@@ -1,0 +1,117 @@
+.about-hero {
+  padding: calc(var(--header-height) + 36px) 0 64px;
+}
+
+.about-hero.hero-backdrop--immersive {
+  background:
+    radial-gradient(90% 80% at 78% 40%, rgba(36, 78, 112, 0.45), transparent 60%),
+    linear-gradient(180deg, #061722 0%, #0a2436 58%, #071d2b 100%);
+}
+
+.about-hero-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.about-hero h1 {
+  margin: 0;
+  max-width: 11em;
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.about-line {
+  display: block;
+}
+
+.about-hero h1 em {
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.about-hero-summary {
+  max-width: 36rem;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.about-hero-aside {
+  display: none;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.asset-pending {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 759px) {
+  .about-line {
+    display: inline;
+  }
+
+  .about-line + .about-line::before {
+    content: " ";
+  }
+
+  .about-hero h1 {
+    max-width: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .about-hero-layout {
+    grid-template-columns: minmax(0, 0.58fr) minmax(140px, 0.42fr);
+    align-items: start;
+    min-height: 360px;
+  }
+
+  .about-hero-aside {
+    display: grid;
+    justify-items: end;
+    gap: 8px;
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-hero {
+    padding-bottom: 88px;
+  }
+
+  .about-hero-layout {
+    min-height: 460px;
+  }
+}

@@ -1,0 +1,4 @@
+npm run lint: passed (oxlint), after the menu-close warning was removed.
+npm run build: passed (tsc -b && vite build).
+Public bundle check with __NOVARIN_PREVIEW__ false: draft leadership and perspective strings absent; empty-state copy present. Flag restored to true.
+No unit test runner is configured.

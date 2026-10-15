@@ -1,0 +1,118 @@
+.focus-hero {
+  padding: calc(var(--header-height) + 40px) 0 64px;
+}
+
+.focus-hero.hero-backdrop--immersive {
+  background:
+    radial-gradient(70% 80% at 78% 45%, rgba(42, 92, 128, 0.55), transparent 62%),
+    radial-gradient(28% 40% at 82% 48%, rgba(213, 177, 106, 0.18), transparent 70%),
+    linear-gradient(180deg, #061722 0%, #0a2436 58%, #071d2b 100%);
+}
+
+.focus-hero-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.focus-hero .about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.focus-hero .about-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.focus-hero h1 {
+  margin: 0;
+  max-width: 12em;
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.focus-hero-line {
+  display: block;
+}
+
+.focus-hero h1 em {
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.focus-hero-summary {
+  max-width: 34rem;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.focus-hero-pending {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.focus-hero-aside {
+  display: none;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 759px) {
+  .focus-hero-line {
+    display: inline;
+  }
+
+  .focus-hero-line + .focus-hero-line::before {
+    content: " ";
+  }
+
+  .focus-hero h1 {
+    max-width: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .focus-hero-layout {
+    grid-template-columns: minmax(0, 0.62fr) minmax(140px, 0.38fr);
+    align-items: start;
+    min-height: 360px;
+  }
+
+  .focus-hero-aside {
+    display: grid;
+    justify-items: end;
+    gap: 8px;
+    padding-top: 72px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .focus-hero {
+    padding-bottom: 88px;
+  }
+
+  .focus-hero-layout {
+    min-height: 460px;
+  }
+}

@@ -1,0 +1,64 @@
+.perspective-reader {
+  width: min(40rem, calc(100vw - 32px));
+  max-height: min(85vh, 720px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-ivory);
+  color: var(--color-text);
+}
+
+.perspective-reader::backdrop {
+  background: rgba(7, 29, 43, 0.62);
+}
+
+.perspective-reader-body {
+  max-height: min(85vh, 720px);
+  overflow: auto;
+  padding: 28px 24px 32px;
+}
+
+.perspective-reader-cover {
+  margin: 0 0 20px;
+  border: 1px solid var(--color-border);
+}
+
+.perspective-reader-close {
+  float: right;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.perspective-reader h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.perspective-reader p,
+.perspective-reader li {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.perspective-reader-note {
+  color: var(--color-gold-dark);
+  font-weight: 600;
+}
+
+.perspective-reader ol {
+  padding-left: 1.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perspective-reader {
+    transition: none;
+  }
+}

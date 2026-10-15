@@ -1,0 +1,112 @@
+.invest-approach {
+  background: var(--color-ivory);
+  padding: 12px 0 48px;
+}
+
+.invest-approach-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.invest-approach .eyebrow {
+  margin: 0 0 14px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.invest-approach h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.invest-approach-line {
+  display: block;
+}
+
+.invest-approach-layout > div > p {
+  max-width: 36rem;
+  margin: 16px 0 0;
+  color: var(--color-muted);
+  font-size: 17px;
+}
+
+.invest-approach .button {
+  margin-top: 22px;
+}
+
+.invest-approach-figure {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #e4ddd0;
+}
+
+.invest-approach-figure img,
+.invest-approach-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.invest-approach-fallback {
+  background:
+    linear-gradient(180deg, rgba(7, 29, 43, 0.15), rgba(7, 29, 43, 0.45)),
+    linear-gradient(115deg, #16364c 0%, #8a6438 55%, #d5b16a 100%);
+}
+
+.invest-approach-figure::after {
+  position: absolute;
+  inset: 0 40% 40% 0;
+  background: linear-gradient(135deg, rgba(7, 29, 43, 0.62), transparent 72%);
+  content: "";
+  pointer-events: none;
+}
+
+.invest-approach figcaption {
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  left: 22px;
+  display: grid;
+  max-width: 12rem;
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+@media (max-width: 759px) {
+  .invest-approach figcaption {
+    display: none;
+  }
+
+  .invest-approach-line {
+    display: inline;
+  }
+
+  .invest-approach-line + .invest-approach-line::before {
+    content: " ";
+  }
+}
+
+@media (min-width: 900px) {
+  .invest-approach {
+    padding: 24px 0 88px;
+  }
+
+  .invest-approach-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+}

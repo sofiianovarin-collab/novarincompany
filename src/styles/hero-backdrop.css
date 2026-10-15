@@ -1,0 +1,81 @@
+/* Full-bleed photographic hero (home + marketing pages) */
+.hero-backdrop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 680px;
+  color: var(--color-white);
+}
+
+.hero-backdrop.has-hero-photo {
+  background:
+    radial-gradient(120% 80% at 82% 42%, rgba(36, 78, 112, 0.55), transparent 58%),
+    linear-gradient(180deg, #061722 0%, #0a2436 58%, #071d2b 100%);
+}
+
+.hero-photo {
+  position: absolute;
+  inset: -12px 0;
+  width: 100%;
+  height: calc(100% + 24px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.leadership-hero .hero-photo {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  object-position: center 12%;
+}
+
+.contact-hero .hero-photo {
+  top: 88px;
+  bottom: 0;
+  height: calc(100% - 48px);
+  object-position: center top;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 29, 43, 0.96) 0%,
+    rgba(7, 29, 43, 0.88) 38%,
+    rgba(7, 29, 43, 0.28) 68%,
+    rgba(7, 29, 43, 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-shade--soft {
+  background: linear-gradient(
+    90deg,
+    rgba(7, 29, 43, 0.92) 0%,
+    rgba(7, 29, 43, 0.72) 42%,
+    rgba(7, 29, 43, 0.35) 100%
+  );
+}
+
+.hero-backdrop > .section-container {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 auto;
+  width: min(var(--max-width), calc(100% - (var(--gutter) * 2)));
+  min-width: 0;
+  max-width: var(--max-width);
+}
+
+@media (max-width: 700px) {
+  .hero-backdrop {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-backdrop.has-hero-photo {
+    min-height: 700px;
+  }
+}

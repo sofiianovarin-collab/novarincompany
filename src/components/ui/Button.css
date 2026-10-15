@@ -1,0 +1,40 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.button-primary:hover {
+  background: var(--color-gold-hover);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.button-secondary:hover {
+  border-color: var(--color-white);
+}
+
+.button-arrow {
+  width: 18px;
+  height: 10px;
+}

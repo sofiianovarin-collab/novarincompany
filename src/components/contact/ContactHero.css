@@ -1,0 +1,117 @@
+.contact-hero {
+  padding: calc(var(--header-height) + 36px) 0 64px;
+}
+
+.contact-hero.hero-backdrop--immersive {
+  background:
+    radial-gradient(46% 120% at 92% 46%, rgba(213, 177, 106, 0.22), transparent 62%),
+    linear-gradient(180deg, #061722 0%, #0a2436 58%, #071d2b 100%);
+}
+
+.contact-hero::after {
+  position: absolute;
+  top: -30%;
+  right: -6%;
+  width: 42%;
+  height: 170%;
+  border: 1px solid rgba(213, 177, 106, 0.28);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.contact-hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+}
+
+.contact-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-kicker span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.contact-hero h1 {
+  margin: 0;
+  max-width: 12em;
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.contact-line {
+  display: block;
+}
+
+.contact-hero h1 em {
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.contact-hero-summary {
+  max-width: 34rem;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+}
+
+.contact-hero-aside {
+  display: none;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 759px) {
+  .contact-line {
+    display: inline;
+  }
+
+  .contact-line + .contact-line::before {
+    content: " ";
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-hero-layout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    min-height: 360px;
+  }
+
+  .contact-hero-aside {
+    display: grid;
+    justify-items: end;
+    gap: 10px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .contact-hero {
+    padding: calc(var(--header-height) + 56px) 0 88px;
+  }
+
+  .contact-hero-layout {
+    min-height: 460px;
+  }
+}

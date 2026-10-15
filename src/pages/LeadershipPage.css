@@ -1,0 +1,41 @@
+.leadership-context {
+  padding: 24px 0 8px;
+  background: var(--color-ivory);
+}
+
+.leadership-context p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.leadership-preview-notice {
+  margin: 0;
+  padding: 14px var(--gutter);
+  border-bottom: 1px solid var(--color-gold);
+  background: #f6efe2;
+  color: var(--color-text);
+  font-size: 15px;
+  text-align: center;
+}
+
+.leadership-empty {
+  padding: calc(var(--header-height) + 48px) 0 64px;
+  background: var(--color-ivory);
+  color: var(--color-text);
+}
+
+.leadership-empty h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+}
+
+.leadership-empty p {
+  max-width: 36rem;
+  margin: 16px 0 0;
+  color: var(--color-muted);
+}

@@ -1,0 +1,4 @@
+Public build with __NOVARIN_PREVIEW__ false.
+Preview notice, "Awaiting confirmed data", and "Source not connected": 0 matches.
+"with context" remains in the approved-path component and is not rendered while snapshots are empty.
+Experience count tests: 7 passed.

@@ -1,0 +1,57 @@
+.privacy-review-notice {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-gold);
+  background: #f6efe2;
+  color: var(--color-text);
+}
+
+.privacy-body {
+  background: var(--color-ivory);
+  padding: 28px 0 64px;
+}
+
+.privacy-date {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+}
+
+.privacy-print {
+  min-height: 44px;
+  margin: 0 0 24px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.privacy-unavailable {
+  padding: calc(var(--header-height) + 48px) 0 72px;
+  background: var(--color-ivory);
+}
+
+.privacy-unavailable h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+}
+
+.privacy-unavailable p {
+  max-width: 36rem;
+  color: var(--color-muted);
+}
+
+@media print {
+  .site-header,
+  .privacy-print,
+  .skip-link {
+    display: none;
+  }
+
+  .privacy-review-notice {
+    border-color: black;
+  }
+}

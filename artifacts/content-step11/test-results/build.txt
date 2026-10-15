@@ -1,0 +1,61 @@
+npm warn Unknown env config "devdir". This will error in a future major version of npm. See `npm help npmrc` for supported config options.
+npm notice run novarin-capital@0.0.0 build
+npm notice run tsc -b && vite build
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 149 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                          0.74 kB │ gzip:   0.42 kB
+dist/assets/source-sans-3-cyrillic-ext-600-normal-6AhwUnSr.woff2         5.52 kB
+dist/assets/source-sans-3-cyrillic-ext-400-normal-BwJdxs7r.woff2         5.57 kB
+dist/assets/source-sans-3-greek-ext-600-normal-DynePNDL.woff2            5.93 kB
+dist/assets/source-sans-3-greek-ext-400-normal-CpIwTHMM.woff2            6.02 kB
+dist/assets/source-sans-3-vietnamese-400-normal-CwtaIDr2.woff2           6.21 kB
+dist/assets/source-sans-3-vietnamese-600-normal-B2sTNYey.woff2           6.22 kB
+dist/assets/cormorant-garamond-vietnamese-500-normal-BZGLGj12.woff2      6.75 kB
+dist/assets/cormorant-garamond-vietnamese-600-normal-BoXdMtcr.woff2      6.79 kB
+dist/assets/source-sans-3-cyrillic-ext-600-normal-uAL1a5gb.woff          6.98 kB
+dist/assets/source-sans-3-cyrillic-ext-400-normal-Cd63HKDh.woff          7.01 kB
+dist/assets/source-sans-3-greek-ext-400-normal-BI1kUwmR.woff             7.89 kB
+dist/assets/source-sans-3-greek-ext-600-normal-D7vJ4nVX.woff             7.91 kB
+dist/assets/source-sans-3-greek-400-normal-DZReXJla.woff2                8.02 kB
+dist/assets/source-sans-3-greek-600-normal-BSO157bq.woff2                8.02 kB
+dist/assets/source-sans-3-vietnamese-600-normal-DpSexF-T.woff            8.16 kB
+dist/assets/source-sans-3-vietnamese-400-normal-dYp9C364.woff            8.18 kB
+dist/assets/cormorant-garamond-vietnamese-500-normal-DqXqCC0q.woff       9.33 kB
+dist/assets/cormorant-garamond-vietnamese-600-normal-C4HEjEaf.woff       9.42 kB
+dist/assets/source-sans-3-cyrillic-400-normal-DjhbW-4D.woff2             9.60 kB
+dist/assets/source-sans-3-cyrillic-600-normal-BnFu5nHC.woff2             9.64 kB
+dist/assets/source-sans-3-greek-600-normal-BNF9LBpG.woff                10.01 kB
+dist/assets/source-sans-3-greek-400-normal-DJm9Ud5h.woff                10.03 kB
+dist/assets/source-sans-3-cyrillic-400-normal-7kQcAFpS.woff             12.00 kB
+dist/assets/source-sans-3-cyrillic-600-normal-y-RO8wOd.woff             12.00 kB
+dist/assets/cormorant-garamond-cyrillic-500-normal-CyAY5ZLS.woff2       12.92 kB
+dist/assets/cormorant-garamond-cyrillic-600-normal-C2atO-64.woff2       13.01 kB
+dist/assets/cormorant-garamond-cyrillic-ext-500-normal-Yta7XZ9C.woff2   14.09 kB
+dist/assets/cormorant-garamond-cyrillic-ext-600-normal-BMhMHfrj.woff2   14.18 kB
+dist/assets/source-sans-3-latin-600-normal-DeckBYAU.woff2               15.66 kB
+dist/assets/source-sans-3-latin-400-normal-DQi5PRDE.woff2               15.69 kB
+dist/assets/cormorant-garamond-cyrillic-500-normal-DkJXBcIH.woff        15.76 kB
+dist/assets/cormorant-garamond-cyrillic-600-normal-FNmA3REe.woff        15.82 kB
+dist/assets/cormorant-garamond-cyrillic-ext-500-normal-lsPpqi9g.woff    17.55 kB
+dist/assets/cormorant-garamond-cyrillic-ext-600-normal-CsIYWmWK.woff    17.62 kB
+dist/assets/source-sans-3-latin-400-normal-AFMiCETP.woff                19.90 kB
+dist/assets/source-sans-3-latin-600-normal-BvDVuF-j.woff                19.90 kB
+dist/assets/cormorant-garamond-latin-ext-500-normal-CH1kM7og.woff2      20.20 kB
+dist/assets/cormorant-garamond-latin-ext-600-normal-DaBc-lu7.woff2      20.30 kB
+dist/assets/cormorant-garamond-latin-500-normal-BsRWmXhO.woff2          23.31 kB
+dist/assets/cormorant-garamond-latin-600-normal-Co1r35X9.woff2          23.39 kB
+dist/assets/cormorant-garamond-latin-ext-600-normal-Dk3-quAP.woff       28.26 kB
+dist/assets/cormorant-garamond-latin-ext-500-normal-DYeaGGzO.woff       28.28 kB
+dist/assets/cormorant-garamond-latin-600-normal-2CBVLo0M.woff           31.30 kB
+dist/assets/cormorant-garamond-latin-500-normal-zIXX3Q-H.woff           31.37 kB
+dist/assets/source-sans-3-latin-ext-600-normal-AEyhgUpm.woff2           32.70 kB
+dist/assets/source-sans-3-latin-ext-400-normal-UNsKFIBq.woff2           33.02 kB
+dist/assets/source-sans-3-latin-ext-600-normal-Wy7HIzqC.woff            43.40 kB
+dist/assets/source-sans-3-latin-ext-400-normal-BGPHfnm_.woff            43.64 kB
+dist/assets/index-BpDYwhLL.css                                          65.02 kB │ gzip:  10.52 kB
+dist/assets/index-j7mKuoeo.js                                          349.83 kB │ gzip: 104.23 kB
+
+✓ built in 110ms

@@ -1,0 +1,30 @@
+npm warn Unknown env config "devdir". This will error in a future major version of npm. See `npm help npmrc` for supported config options.
+npm notice run novarin-capital@0.0.0 test:contact
+npm notice run node --experimental-strip-types --test server/contact/handler.test.ts
+{"correlationId":"26dc7f72-1694-4d5a-8c11-e783fa3b11e0","at":"2026-09-24T18:33:25.761Z","category":"contact","durationMs":2,"outcome":"accepted"}
+{"correlationId":"3886125f-7585-4f1a-b1e4-f63e878d5ac1","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"accepted"}
+{"correlationId":"83fca498-3a16-45da-ba99-77c6f69f100a","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"accepted"}
+{"correlationId":"00d2d846-643f-46c5-af9c-9c673fd70744","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"validation"}
+{"correlationId":"570a8125-243a-4db5-9d8a-1ca91887caf5","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"validation"}
+{"correlationId":"a4244b21-be3e-4b0d-a95f-f10d3c4e13ea","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"malformed"}
+{"correlationId":"81bbd617-f727-4ee3-9abd-cba122da7c85","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"too-large"}
+{"correlationId":"6144bafe-57df-463b-bdab-b9c37c89eda9","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"method"}
+{"correlationId":"16e6b3c3-bc4c-45fe-9049-263687a68ca3","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":0,"outcome":"content-type"}
+{"correlationId":"24641371-1ef5-44cf-96c2-5f219b407f69","at":"2026-09-24T18:33:25.764Z","category":"contact","durationMs":1,"outcome":"origin"}
+{"correlationId":"993bcf9e-5b7f-4417-856d-aaf83f61f2eb","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"disabled"}
+{"correlationId":"f18074ae-41ac-48f1-bb01-bbea6edc32db","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"live-inactive"}
+{"correlationId":"ed8dba63-17fa-4b19-8fba-dff6b33e55da","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"accepted"}
+{"correlationId":"deee6f3c-ae11-4c27-8b46-f00956d4f537","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"rate-limited"}
+{"correlationId":"dbc726ac-eccd-49fb-a1ff-9da89870cbce","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"delivery-rejected"}
+{"correlationId":"fdf740ef-be25-42dc-8a24-03b3a3df9716","at":"2026-09-24T18:33:25.765Z","category":"contact","durationMs":0,"outcome":"unknown"}
+✔ captures each inquiry type and drops inactive fields (2.935668ms)
+✔ rejects invalid, unknown, oversized, and disabled calls (0.417843ms)
+✔ rate limit, rejection, and unknown acceptance do not invent delivery (0.257592ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55.737682

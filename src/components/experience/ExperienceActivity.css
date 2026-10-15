@@ -1,0 +1,340 @@
+.experience-intro,
+.investment-activity,
+.website-activity {
+  background: var(--color-ivory);
+}
+
+.experience-history {
+  background: #f3eee4;
+  padding: 48px 0 56px;
+}
+
+.experience-intro {
+  padding: 28px 0 8px;
+}
+
+.investment-activity,
+.website-activity {
+  padding: 12px 0 48px;
+}
+
+.experience-review-notice {
+  margin: 0 0 28px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-gold);
+  background: #f6efe2;
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.experience-kicker {
+  margin: 0 0 12px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experience-intro h2,
+.investment-activity h2,
+.experience-history h2,
+.website-activity h2 {
+  margin: 0;
+  max-width: 16em;
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.experience-intro h2 em {
+  color: var(--color-gold-dark);
+  font-style: normal;
+}
+
+.investment-activity h2 span,
+.experience-history h2 span {
+  display: block;
+}
+
+.experience-summary,
+.experience-heading > p,
+.experience-metric p,
+.experience-panel p,
+.website-activity p {
+  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.experience-heading {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.experience-metric-row,
+.experience-panels,
+.website-activity-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-metric,
+.experience-panel,
+.website-activity-panel {
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 22px;
+}
+
+.experience-figure {
+  margin: 8px 0;
+  min-height: 1.1em;
+  color: var(--color-navy);
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 5vw, 60px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.experience-metric h3,
+.experience-panel h3,
+.website-metrics h3 {
+  margin: 8px 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.experience-index,
+.experience-note,
+.experience-pending,
+.experience-badge,
+.experience-meta,
+.experience-year {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.experience-pending,
+.experience-badge {
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experience-timeline {
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+  border-left: 1px solid var(--color-gold);
+}
+
+.experience-timeline li {
+  position: relative;
+  padding: 0 0 18px 16px;
+}
+
+.experience-timeline li::before {
+  position: absolute;
+  top: 6px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  content: "";
+}
+
+.experience-panel h4 {
+  margin: 4px 0;
+  font-size: 18px;
+}
+
+.experience-meta {
+  display: grid;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.experience-meta a {
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.experience-disclosure {
+  margin-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.experience-disclosure button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.experience-disclosure-body {
+  padding-bottom: 12px;
+  color: var(--color-muted);
+  font-size: 16px;
+}
+
+.website-activity-panel {
+  gap: 22px;
+}
+
+.website-metrics,
+.case-list {
+  display: grid;
+  gap: 16px;
+}
+
+.selected-cases {
+  background: var(--color-ivory);
+  padding: 12px 0 48px;
+}
+
+.deck-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+  margin: 22px 0 28px;
+}
+
+.deck-view,
+.deck-download {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.deck-view {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 2px;
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.deck-view:hover {
+  background: var(--color-gold-hover);
+}
+
+.deck-download {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.deck-download:hover {
+  color: var(--color-gold-dark);
+}
+
+.case-card {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-gold);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 22px;
+}
+
+.case-card h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 34px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.case-card h4 {
+  margin: 14px 0 4px;
+  color: var(--color-gold-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.case-card-meta p,
+.case-list .experience-note {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+@media (min-width: 800px) {
+  .experience-metric-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .experience-metric + .experience-metric {
+    border-left: 0;
+  }
+
+  .experience-panels {
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 22px;
+  }
+
+  .experience-heading,
+  .website-activity-panel {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: end;
+  }
+
+  .website-activity-panel {
+    align-items: start;
+  }
+
+  .website-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .case-card {
+    grid-template-columns: 0.34fr 0.66fr;
+    gap: 28px;
+  }
+
+  .case-card-body {
+    border-left: 1px solid var(--color-border);
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .experience-history,
+  .investment-activity,
+  .website-activity {
+    padding-top: 28px;
+    padding-bottom: 72px;
+  }
+}

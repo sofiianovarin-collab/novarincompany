@@ -1,0 +1,8 @@
+.featured-perspective-label {
+  margin: 0 0 12px;
+  color: var(--color-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}

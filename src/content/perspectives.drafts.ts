@@ -1,0 +1,121 @@
+import type { PerspectiveRecord } from "../types/perspectives";
+
+/** Anonymous editorial outlines. Not published articles. */
+export const perspectiveDrafts: PerspectiveRecord[] = [
+  {
+    id: "local-payment-infrastructure",
+    order: 1,
+    title: "Why local payment infrastructure matters.",
+    excerpt:
+      "Questions about how collections, conversion and final payouts connect to the needs of local customers.",
+    category: "Markets",
+    keywords: ["collections", "payouts", "conversion"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "Who pays, who receives, and which local networks are involved?",
+      "Where does a payment leave one provider's responsibility and enter another's?",
+      "What evidence would show that the final recipient experience is improving?",
+    ],
+    featured: true,
+  },
+  {
+    id: "building-for-scale",
+    order: 2,
+    title: "Building for scale in real markets.",
+    excerpt:
+      "A working framework for examining reliability, dependencies and support as a payment product grows.",
+    category: "Infrastructure",
+    keywords: ["reliability", "dependencies"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "Which operational dependencies become more important as usage increases?",
+      "How are failures detected, reconciled and communicated to customers?",
+      "What should be tested before expanding a payment service?",
+    ],
+    featured: false,
+  },
+  {
+    id: "operating-responsibilities",
+    order: 3,
+    title: "Understanding operating responsibilities.",
+    excerpt: "Questions to clarify the roles, contracts and permissions behind a payment service.",
+    category: "Regulation",
+    keywords: ["contracts", "permissions", "roles"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "Which legal entity performs each activity in the payment flow?",
+      "What permissions and contractual responsibilities need qualified local review?",
+      "Which parts of the operating model remain unconfirmed?",
+    ],
+    featured: false,
+  },
+  {
+    id: "product-to-everyday-use",
+    order: 4,
+    title: "From product to everyday use.",
+    excerpt: "An outline for testing repeat use, customer onboarding and practical product value.",
+    category: "Business Building",
+    keywords: ["onboarding", "repeat use"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "What recurring task is the customer trying to complete?",
+      "Where does onboarding create friction or uncertainty?",
+      "What would distinguish genuine repeat use from a one-off trial?",
+    ],
+    featured: false,
+  },
+  {
+    id: "cross-border-payments",
+    order: 5,
+    title: "The next chapter for cross-border payments.",
+    excerpt: "A framework for mapping the collection-to-payout journey before considering a new market.",
+    category: "Markets",
+    keywords: ["cross-border", "liquidity"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "What is the exact collection-to-payout route under consideration?",
+      "Which parties handle conversion, liquidity and final delivery?",
+      "What happens when one link in the route becomes unavailable?",
+    ],
+    featured: false,
+  },
+  {
+    id: "founder-questions",
+    order: 6,
+    title: "What we look for in founders.",
+    excerpt:
+      "Draft discussion points on customer insight, clear thinking and a constructive working relationship.",
+    category: "People",
+    keywords: ["founders", "customers"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "How clearly does the team describe its customers and their needs?",
+      "Which assumptions has it tested, and what changed as a result?",
+      "Where could a potential investment partner add useful, specific support?",
+    ],
+    featured: false,
+  },
+  {
+    id: "open-financial-future",
+    order: 7,
+    title: "A more open financial future.",
+    excerpt:
+      "A proposed editorial note on the questions behind Novarin's payment and settlement focus.",
+    category: "Company Updates",
+    keywords: ["investment focus", "settlement"],
+    status: "draft",
+    publicationApproved: false,
+    outlineQuestions: [
+      "Which payment problems fall within the proposed investment focus?",
+      "What operating evidence would inform an investment discussion?",
+      "Which company capabilities and commitments still need to be established?",
+    ],
+    featured: false,
+  },
+];

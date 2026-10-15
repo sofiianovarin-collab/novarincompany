@@ -1,0 +1,116 @@
+.approach-hero {
+  padding: calc(var(--header-height) + 40px) 0 64px;
+}
+
+.approach-hero.hero-backdrop--immersive {
+  background:
+    radial-gradient(80% 90% at 82% 50%, rgba(196, 140, 72, 0.28), transparent 55%),
+    radial-gradient(50% 70% at 70% 40%, rgba(36, 78, 112, 0.4), transparent 60%),
+    linear-gradient(180deg, #061722 0%, #0a2436 58%, #071d2b 100%);
+}
+
+.approach-hero-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.approach-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.approach-kicker span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.approach-hero h1 {
+  margin: 0;
+  max-width: 12em;
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.approach-line {
+  display: block;
+}
+
+.approach-hero h1 em {
+  color: var(--color-gold);
+  font-style: normal;
+}
+
+.approach-hero-summary {
+  max-width: 34rem;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+}
+
+.approach-hero-pending {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.approach-hero-aside {
+  display: none;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 759px) {
+  .approach-line {
+    display: inline;
+  }
+
+  .approach-line + .approach-line::before {
+    content: " ";
+  }
+
+  .approach-hero h1 {
+    max-width: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .approach-hero-layout {
+    grid-template-columns: minmax(0, 0.58fr) minmax(140px, 0.42fr);
+    min-height: 320px;
+  }
+
+  .approach-hero-aside {
+    display: grid;
+    justify-items: end;
+    gap: 8px;
+    padding-top: 64px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .approach-hero {
+    padding-bottom: 88px;
+  }
+
+  .approach-hero-layout {
+    min-height: 460px;
+  }
+}
