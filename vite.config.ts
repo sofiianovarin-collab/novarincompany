@@ -1,9 +1,38 @@
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
+
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "script-src 'self'",
+  "style-src 'self'",
+  "font-src 'self'",
+  "img-src 'self'",
+  "connect-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ')
+
+// The dev server injects inline React Refresh scripts, so the policy is only added to built HTML.
+function contentSecurityPolicyMeta(): Plugin {
+  return {
+    name: 'novarin-csp-meta',
+    apply: 'build',
+    transformIndexHtml() {
+      return [
+        {
+          tag: 'meta',
+          attrs: { 'http-equiv': 'Content-Security-Policy', content: contentSecurityPolicy },
+          injectTo: 'head-prepend',
+        },
+      ]
+    },
+  }
+}
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), contentSecurityPolicyMeta()],
   build: {
     sourcemap: false,
   },
@@ -11,7 +40,7 @@ export default defineConfig({
     __NOVARIN_PREVIEW__: JSON.stringify(false),
   },
   server: {
-    host: true,
+    host: '127.0.0.1',
     port: 5173,
     strictPort: false,
     proxy: {
@@ -19,7 +48,7 @@ export default defineConfig({
     },
   },
   preview: {
-    host: true,
+    host: '127.0.0.1',
     port: 4173,
   },
 })

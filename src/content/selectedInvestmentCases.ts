@@ -4,6 +4,8 @@ import { publishedInvestmentCases, type InvestmentCaseRecord } from "../../share
  * Owner-maintained records. Public pages receive only the filtered view below.
  * Facts are taken from the September 2026 company presentation. Token prices and
  * mark-to-market values are omitted; they are not the investment.
+ * This file is compiled into the public bundle. Keep `privateIdentity` and `internalNote`
+ * null here; record them in `docs/selected-investment-inputs.md` instead.
  */
 export const investmentCaseRecords: InvestmentCaseRecord[] = [
   {
@@ -27,8 +29,7 @@ export const investmentCaseRecords: InvestmentCaseRecord[] = [
     involvement:
       "The role has been to back the settlement layer early and stay with it as the network moved from development into live operation, including Yellow Pro, the token launch and the start of market trading.",
     outcome: null,
-    internalNote:
-      "September 2026 presentation. A token price of US$0.042 and an approximate holding value of US$2.1 million were quoted as at 14 August 2026 and are not published.",
+    internalNote: null,
   },
   {
     id: "otomato",
@@ -41,7 +42,7 @@ export const investmentCaseRecords: InvestmentCaseRecord[] = [
     investingEntity: "Novarin Capital",
     presentation: "named",
     publicTitle: "Otomato",
-    privateIdentity: "Dyment Labs Pte. Ltd.",
+    privateIdentity: null,
     sector: "Agent infrastructure",
     period: "2024",
     businessContext:
@@ -52,7 +53,7 @@ export const investmentCaseRecords: InvestmentCaseRecord[] = [
       "This is a minority investment made while the product was still being built. A later US$2 million investment by Improbable Worlds Ltd, announced in December 2025, is a separate investor's commitment and is not part of Novarin's position.",
     outcome:
       "The application was released on the App Store and Google Play in April 2026. The company has described more than 1,500 use cases and connections to more than ten protocols.",
-    internalNote: "September 2026 presentation. Dyment Labs is the software entity; Otomato is the product name.",
+    internalNote: null,
   },
   {
     id: "nijinn-predictive-labs",
@@ -65,7 +66,7 @@ export const investmentCaseRecords: InvestmentCaseRecord[] = [
     investingEntity: "Novarin Capital",
     presentation: "named",
     publicTitle: "Nijinn",
-    privateIdentity: "Predictive Labs Pte. Ltd.",
+    privateIdentity: null,
     sector: "Prediction-market infrastructure",
     period: "2026",
     businessContext:
@@ -76,7 +77,7 @@ export const investmentCaseRecords: InvestmentCaseRecord[] = [
       "Novarin is an investor and a strategic adviser on commercial development. The advisory work sits alongside the equity. It is not an operating role, and it does not include control of the platform.",
     outcome:
       "Predictive Labs has released Nijinn as its analytics product for prediction markets. The investment was stepped up after the agreed development work was delivered.",
-    internalNote: "September 2026 presentation. Public title is the product; the investee is Predictive Labs Pte. Ltd.",
+    internalNote: null,
   },
 ];
 
